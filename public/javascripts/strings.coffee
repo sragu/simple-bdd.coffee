@@ -5,5 +5,5 @@ root.hamming = (str1, str2) ->
     return 0 if str1 is str2
    
     distance = 0
-    (distance++ if str2.charAt(i) isnt char) for char,i in str1.split '' 
+    (distance++ if str2.charAt(i) isnt str1.charAt(i)) for i in [0..str1.length] 
     return distance
